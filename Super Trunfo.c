@@ -638,8 +638,18 @@ int main () {
                             (inverso_densidade_go4 * 1000.0);
 
 //-------------------------Fim da declaração de variáveis-------------------------
-    
-printf("---> Seja bem vindo ao Super Trunfo <---\n");
+
+
+//-------------------------Iniciar Jogo-------------------------------------------
+char opcao;
+char carta_jogador;
+char escolha_estado;
+int sair = 0;
+
+while(1){    
+printf("\n==================================================\n");
+printf("  BEM VINDO AO SUPER TRUNFO!!! VAMOS COMEÇAR?\n");
+printf("====================================================\n");
 
 printf("Menu do jogo:\n");
 printf("I. Iniciar Jogo\n");
@@ -647,39 +657,93 @@ printf("R. Regras\n");
 printf("C. Cartas cadastradas e seus dados\n");
 printf("S. Sair\n");
 
-printf("Primeiro, escolha a sua carta:\n");
-//código para escolha da carta + código para o PC escolher uma carta aleatória
+printf("Escolha a sua opção:\n");
+scanf(" %c", &opcao);
 
-printf("Muito bem, agora escolha o atributo que deseja comparar:\n");
-//código para escolha do atributo
+//--------------------------Jogo-------------------------------------------------------
+switch (opcao)
 
-printf("");
-//código para dar o resultado ao usuário
-
-
+    case 'I': 
+    case 'i':
 
 
 
 
 
 
+    break;
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------Regras------------------------------------------
+switch (opcao)  //Pronto
+{
+    case 'R': 
+    case 'r':
+        printf("\n");
+        printf("O jogo Super Trunfo é muito simples:\n");
+        printf("1º Escolha a sua carta.\n");
+        printf("2º Escolha o atributo que deseja comparar.\n");
+        printf("3º O computador irá escolhar uma carta aleatória para jogar.\n");
+        printf("4º Vai aparecer na tela o resultado do jogo (quem venceu ou se deu empate)\n\n");
+        printf("OBS: Certifique-se de escolher uma carta válida,\n");
+        printf("     em caso de dúvidas, consulte a seção Cartas Cadastradas.");
+        printf("\n");
+    break;
+}
+//-----------------------------Cartas Cadastradas--------------------------------------
+switch (opcao)
+{
+    case 'C':
+    case 'c':  
+    //Início da exibição dos dados das cartas
+        switch (escolha_estado)
+        {
+            while(!sair){
+            printf("Cartas cadastradas. Escolha um estado :\n");
+            printf("A. São Paulo\n");
+            printf("B. Rio de Janeiro\n");
+            printf("C. Paraná\n");
+            printf("D. Minas Gerais\n");
+            printf("E. Bahia\n");
+            printf("F. Rio Grandedo Sul\n");
+            printf("G. Pernambuco\n");
+            printf("H. Goias\n");
+            printf("Z. Sair\n");
+            scanf("  %c", escolha_estado);
+
+            case 'A':
+            case 'a':
+
+            
+
+
+
+        }
 
 
 
 
 
 
+    printf("Carta 1:\n");
+    printf("Estado: %s\n", nome_estado_1);
+    printf("Código: %s\n", codigo_carta_1);
+    printf("Cidade: %s\n", nome_cidade_1);
+    printf("População: %d\n", populacao_1);
+    printf("Área: %.2f Km²\n", area_1);
+    printf("PIB: R$ %.2f Bilhões de Reais\n", pib_1);
+    printf("Pontos Turísticos: %d\n", pontos_turisticos_1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_1);
+    printf("PIB per capita: R$ %.2f\n", pib_per_capita_1);
+    printf("Super Poder: %.2f\n", SuperPoder_1);         
 
 
 
+        }
+}
 
 
 
-
-
-
-
-
-
+}
 
 }
