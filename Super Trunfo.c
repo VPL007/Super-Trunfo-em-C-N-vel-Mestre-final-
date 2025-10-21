@@ -4,7 +4,7 @@
 
 int main () {
     
-//-------------------------Váriáveis do estado de São Paulo-------------------------
+//Váriáveis do estado de São Paulo
     char nome_estado_sp [30] = "São Paulo";
 
         // Variáveis da cidade (São Paulo)
@@ -84,7 +84,7 @@ int main () {
                             (pib_per_capita_sp4 / 10000.0) +
                             (inverso_densidade_sp4 * 1000.0);
 
-//-------------------------Variáveis do estado do Rio de Janeiro-------------------------
+//Variáveis do estado do Rio de Janeiro
     char nome_estado_rj [30] = "Rio de Janeiro";
     
         //Variáveis da cidade (Rio de Janeiro)
@@ -163,7 +163,7 @@ int main () {
                             (pib_per_capita_rj4 / 10000.0) +
                             (inverso_densidade_rj4 * 1000.0);
 
-//-------------------------Variáveis do estado do Paraná-------------------------
+//Variáveis do estado do Paraná
     char nome_estado_pr [30] = "Paraná";
 
         //Variáveis da cidade (Curitiba)
@@ -242,7 +242,7 @@ int main () {
                             (pib_per_capita_pr4 / 10000.0) +
                             (inverso_densidade_pr4 * 1000.0);  
 
-//-------------------------Variáveis do estado de Minas Gerais-------------------------
+//Variáveis do estado de Minas Gerais
     char nome_estado_mg[30] = "Minas Gerais";
 
         // Variáveis da cidade (Belo Horizonte)
@@ -321,7 +321,7 @@ int main () {
                             (pib_per_capita_mg4 / 10000.0) +
                             (inverso_densidade_mg4 * 1000.0);
 
-//-------------------------Variáveis do estado da Bahia-------------------------
+//Variáveis do estado da Bahia
     char nome_estado_bh[30] = "Bahia";
 
         // Variáveis da cidade (Salvador)
@@ -400,7 +400,7 @@ int main () {
                             (pib_per_capita_bh4 / 10000.0) +
                             (inverso_densidade_bh4 * 1000.0);
 
-//-------------------------Variáveis do estado do Rio Grande do Sul-------------------------
+//Variáveis do estado do Rio Grande do Sul
     char nome_estado_rs[30] = "Rio Grande do Sul";
 
         // Variáveis da cidade (Porto Alegre)
@@ -479,7 +479,7 @@ int main () {
                             (pib_per_capita_rs4 / 10000.0) +
                             (inverso_densidade_rs4 * 1000.0);
     
-//-------------------------Variáveis do estado de Pernambuco-------------------------
+//Variáveis do estado de Pernambuco
     char nome_estado_pe[30] = "Pernambuco";
 
         // Variáveis da cidade (Recife)
@@ -558,7 +558,7 @@ int main () {
                             (pib_per_capita_pe4 / 10000.0) +
                             (inverso_densidade_pe4 * 1000.0);
 
-//-------------------------Variáveis do estado de Goiás-------------------------
+//Variáveis do estado de Goiás
     char nome_estado_go[30] = "Goias";
 
         // Variáveis da cidade (Goiania)
@@ -646,7 +646,7 @@ char carta_jogador;
 char escolha_estado;
 int sair = 0;
 
-while(1){    
+while(!sair){    
 printf("\n==================================================\n");
 printf("  BEM VINDO AO SUPER TRUNFO!!! VAMOS COMEÇAR?\n");
 printf("====================================================\n");
@@ -660,9 +660,9 @@ printf("S. Sair\n");
 printf("Escolha a sua opção:\n");
 scanf(" %c", &opcao);
 
-//--------------------------Jogo-------------------------------------------------------
-switch (opcao)
-
+//-----------------------Jogo-------------------------------------------------------
+switch (opcao) //Fazer
+{
     case 'I': 
     case 'i':
 
@@ -672,10 +672,9 @@ switch (opcao)
 
 
     break;
-//-------------------------------------------------------------------------------------
-
-//-------------------------------------Regras------------------------------------------
-switch (opcao)  //Pronto
+}    
+//-----------------------Regras--------------------------------------------------
+switch (opcao) //Pronto
 {
     case 'R': 
     case 'r':
@@ -690,60 +689,490 @@ switch (opcao)  //Pronto
         printf("\n");
     break;
 }
-//-----------------------------Cartas Cadastradas--------------------------------------
-switch (opcao)
+//-----------------------Cartas Cadastradas-----------------------------------
+switch (opcao) //Pronto
 {
     case 'C':
     case 'c':  
     //Início da exibição dos dados das cartas
-        switch (escolha_estado)
-        {
-            while(!sair){
-            printf("Cartas cadastradas. Escolha um estado :\n");
-            printf("A. São Paulo\n");
-            printf("B. Rio de Janeiro\n");
-            printf("C. Paraná\n");
-            printf("D. Minas Gerais\n");
-            printf("E. Bahia\n");
-            printf("F. Rio Grandedo Sul\n");
-            printf("G. Pernambuco\n");
-            printf("H. Goias\n");
-            printf("Z. Sair\n");
-            scanf("  %c", escolha_estado);
+        printf("Cartas cadastradas. Escolha um estado :\n");
+        printf("A. São Paulo\n");
+        printf("B. Rio de Janeiro\n");
+        printf("C. Paraná\n");
+        printf("D. Minas Gerais\n");
+        printf("E. Bahia\n");
+        printf("F. Rio Grandedo Sul\n");
+        printf("G. Pernambuco\n");
+        printf("H. Goias\n");
+        scanf(" %c", &escolha_estado);
+        printf("\n\n");
 
+switch (escolha_estado)
+        {
+            { //A. Cidades de São Paulo
             case 'A':
             case 'a':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_sp);
+                printf("Código: %s\n", codigo_carta_sp1);
+                printf("Cidade: %s\n", nome_carta_sp1);
+                printf("População: %d\n", populacao_sp1);
+                printf("Área: %.2f Km²\n", area_sp1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_sp1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_sp1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_sp1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_sp1);
+                printf("Super Poder: %.2f\n", super_poder_sp1);         
+                printf("\n");
 
-            
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_sp);
+                printf("Código: %s\n", codigo_carta_sp2);
+                printf("Cidade: %s\n", nome_carta_sp2);
+                printf("População: %d\n", populacao_sp2);
+                printf("Área: %.2f Km²\n", area_sp2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_sp2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_sp2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_sp2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_sp2);
+                printf("Super Poder: %.2f\n", super_poder_sp2);         
+                printf("\n");
 
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_sp);
+                printf("Código: %s\n", codigo_carta_sp3);
+                printf("Cidade: %s\n", nome_carta_sp3);
+                printf("População: %d\n", populacao_sp3);
+                printf("Área: %.2f Km²\n", area_sp3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_sp3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_sp3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_sp3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_sp3);
+                printf("Super Poder: %.2f\n", super_poder_sp3);         
+                printf("\n");
 
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_sp);
+                printf("Código: %s\n", codigo_carta_sp4);
+                printf("Cidade: %s\n", nome_carta_sp4);
+                printf("População: %d\n", populacao_sp4);
+                printf("Área: %.2f Km²\n", area_sp4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_sp4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_sp4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_sp4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_sp4);
+                printf("Super Poder: %.2f\n", super_poder_sp4);         
+                printf("\n");
+            break;
+            }
+            { //B. Cidades do Rio de Janeiro
+            case 'B':
+            case 'b':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_rj);
+                printf("Código: %s\n", codigo_carta_rj1);
+                printf("Cidade: %s\n", nome_carta_rj1);
+                printf("População: %d\n", populacao_rj1);
+                printf("Área: %.2f Km²\n", area_rj1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rj1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rj1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rj1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rj1);
+                printf("Super Poder: %.2f\n", super_poder_rj1);         
+                printf("\n");
 
-        }
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_rj);
+                printf("Código: %s\n", codigo_carta_rj2);
+                printf("Cidade: %s\n", nome_carta_rj2);
+                printf("População: %d\n", populacao_rj2);
+                printf("Área: %.2f Km²\n", area_rj2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rj2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rj2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rj2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rj2);
+                printf("Super Poder: %.2f\n", super_poder_rj2);         
+                printf("\n");
 
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_rj);
+                printf("Código: %s\n", codigo_carta_rj3);
+                printf("Cidade: %s\n", nome_carta_rj3);
+                printf("População: %d\n", populacao_rj3);
+                printf("Área: %.2f Km²\n", area_rj3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rj3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rj3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rj3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rj3);
+                printf("Super Poder: %.2f\n", super_poder_rj3);         
+                printf("\n");
 
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_rj);
+                printf("Código: %s\n", codigo_carta_rj4);
+                printf("Cidade: %s\n", nome_carta_rj4);
+                printf("População: %d\n", populacao_rj4);
+                printf("Área: %.2f Km²\n", area_rj4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rj4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rj4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rj4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rj4);
+                printf("Super Poder: %.2f\n", super_poder_rj4);         
+                printf("\n");
+            break;
+            }
+            { //C. Cidades do Paraná
+            case 'C':
+            case 'c':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_pr);
+                printf("Código: %s\n", codigo_carta_pr1);
+                printf("Cidade: %s\n", nome_carta_pr1);
+                printf("População: %d\n", populacao_pr1);
+                printf("Área: %.2f Km²\n", area_pr1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pr1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pr1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pr1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pr1);
+                printf("Super Poder: %.2f\n", super_poder_pr1);         
+                printf("\n");
 
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_pr);
+                printf("Código: %s\n", codigo_carta_pr2);
+                printf("Cidade: %s\n", nome_carta_pr2);
+                printf("População: %d\n", populacao_pr2);
+                printf("Área: %.2f Km²\n", area_pr2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pr2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pr2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pr2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pr2);
+                printf("Super Poder: %.2f\n", super_poder_pr2);         
+                printf("\n");
 
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_pr);
+                printf("Código: %s\n", codigo_carta_pr3);
+                printf("Cidade: %s\n", nome_carta_pr3);
+                printf("População: %d\n", populacao_pr3);
+                printf("Área: %.2f Km²\n", area_pr3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pr3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pr3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pr3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pr3);
+                printf("Super Poder: %.2f\n", super_poder_pr3);         
+                printf("\n");
 
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_pr);
+                printf("Código: %s\n", codigo_carta_pr4);
+                printf("Cidade: %s\n", nome_carta_pr4);
+                printf("População: %d\n", populacao_pr4);
+                printf("Área: %.2f Km²\n", area_pr4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pr4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pr4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pr4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pr4);
+                printf("Super Poder: %.2f\n", super_poder_pr4);         
+                printf("\n");
+            break;
+            }
+            { //D. Cidades de Minas Gerais
+            case 'D':
+            case 'd':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_mg);
+                printf("Código: %s\n", codigo_carta_mg1);
+                printf("Cidade: %s\n", nome_carta_mg1);
+                printf("População: %d\n", populacao_mg1);
+                printf("Área: %.2f Km²\n", area_mg1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_mg1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_mg1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_mg1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_mg1);
+                printf("Super Poder: %.2f\n", super_poder_mg1);         
+                printf("\n");
 
-    printf("Carta 1:\n");
-    printf("Estado: %s\n", nome_estado_1);
-    printf("Código: %s\n", codigo_carta_1);
-    printf("Cidade: %s\n", nome_cidade_1);
-    printf("População: %d\n", populacao_1);
-    printf("Área: %.2f Km²\n", area_1);
-    printf("PIB: R$ %.2f Bilhões de Reais\n", pib_1);
-    printf("Pontos Turísticos: %d\n", pontos_turisticos_1);
-    printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_1);
-    printf("PIB per capita: R$ %.2f\n", pib_per_capita_1);
-    printf("Super Poder: %.2f\n", SuperPoder_1);         
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_mg);
+                printf("Código: %s\n", codigo_carta_mg2);
+                printf("Cidade: %s\n", nome_carta_mg2);
+                printf("População: %d\n", populacao_mg2);
+                printf("Área: %.2f Km²\n", area_mg2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_mg2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_mg2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_mg2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_mg2);
+                printf("Super Poder: %.2f\n", super_poder_mg2);         
+                printf("\n");
 
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_mg);
+                printf("Código: %s\n", codigo_carta_mg3);
+                printf("Cidade: %s\n", nome_carta_mg3);
+                printf("População: %d\n", populacao_mg3);
+                printf("Área: %.2f Km²\n", area_mg3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_mg3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_mg3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_mg3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_mg3);
+                printf("Super Poder: %.2f\n", super_poder_mg3);         
+                printf("\n");
 
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_mg);
+                printf("Código: %s\n", codigo_carta_mg4);
+                printf("Cidade: %s\n", nome_carta_mg4);
+                printf("População: %d\n", populacao_mg4);
+                printf("Área: %.2f Km²\n", area_mg4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_mg4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_mg4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_mg4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_mg4);
+                printf("Super Poder: %.2f\n", super_poder_mg4);         
+                printf("\n");
+            break; 
+            }           
+            { //E. Cidades da Bahia
+            case 'E':
+            case 'e':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_bh);
+                printf("Código: %s\n", codigo_carta_bh1);
+                printf("Cidade: %s\n", nome_carta_bh1);
+                printf("População: %d\n", populacao_bh1);
+                printf("Área: %.2f Km²\n", area_bh1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_bh1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_bh1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_bh1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_bh1);
+                printf("Super Poder: %.2f\n", super_poder_bh1);         
+                printf("\n");
 
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_bh);
+                printf("Código: %s\n", codigo_carta_bh2);
+                printf("Cidade: %s\n", nome_carta_bh2);
+                printf("População: %d\n", populacao_bh2);
+                printf("Área: %.2f Km²\n", area_bh2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_bh2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_bh2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_bh2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_bh2);
+                printf("Super Poder: %.2f\n", super_poder_bh2);         
+                printf("\n");
+
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_bh);
+                printf("Código: %s\n", codigo_carta_bh3);
+                printf("Cidade: %s\n", nome_carta_bh3);
+                printf("População: %d\n", populacao_bh3);
+                printf("Área: %.2f Km²\n", area_bh3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_bh3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_bh3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_bh3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_bh3);
+                printf("Super Poder: %.2f\n", super_poder_bh3);         
+                printf("\n");
+
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_bh);
+                printf("Código: %s\n", codigo_carta_bh4);
+                printf("Cidade: %s\n", nome_carta_bh4);
+                printf("População: %d\n", populacao_bh4);
+                printf("Área: %.2f Km²\n", area_bh4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_bh4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_bh4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_bh4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_bh4);
+                printf("Super Poder: %.2f\n", super_poder_bh4);         
+                printf("\n");
+            break;
+            }
+            { //F. Cidades do Rio Grande do Sul
+            case 'F':
+            case 'f':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_rs);
+                printf("Código: %s\n", codigo_carta_rs1);
+                printf("Cidade: %s\n", nome_carta_rs1);
+                printf("População: %d\n", populacao_rs1);
+                printf("Área: %.2f Km²\n", area_rs1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rs1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rs1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rs1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rs1);
+                printf("Super Poder: %.2f\n", super_poder_rs1);         
+                printf("\n");
+
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_rs);
+                printf("Código: %s\n", codigo_carta_rs2);
+                printf("Cidade: %s\n", nome_carta_rs2);
+                printf("População: %d\n", populacao_rs2);
+                printf("Área: %.2f Km²\n", area_rs2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rs2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rs2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rs2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rs2);
+                printf("Super Poder: %.2f\n", super_poder_rs2);         
+                printf("\n");
+
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_rs);
+                printf("Código: %s\n", codigo_carta_rs3);
+                printf("Cidade: %s\n", nome_carta_rs3);
+                printf("População: %d\n", populacao_rs3);
+                printf("Área: %.2f Km²\n", area_rs3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rs3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rs3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rs3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rs3);
+                printf("Super Poder: %.2f\n", super_poder_rs3);         
+                printf("\n");
+
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_rs);
+                printf("Código: %s\n", codigo_carta_rs4);
+                printf("Cidade: %s\n", nome_carta_rs4);
+                printf("População: %d\n", populacao_rs4);
+                printf("Área: %.2f Km²\n", area_rs4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_rs4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_rs4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_rs4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_rs4);
+                printf("Super Poder: %.2f\n", super_poder_rs4);         
+                printf("\n");
+            break;
+            }
+            { //G. Cidades de Pernambuco
+            case 'G':
+            case 'g':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_pe);
+                printf("Código: %s\n", codigo_carta_pe1);
+                printf("Cidade: %s\n", nome_carta_pe1);
+                printf("População: %d\n", populacao_pe1);
+                printf("Área: %.2f Km²\n", area_pe1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pe1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pe1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pe1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pe1);
+                printf("Super Poder: %.2f\n", super_poder_pe1);         
+                printf("\n");
+
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_pe);
+                printf("Código: %s\n", codigo_carta_pe2);
+                printf("Cidade: %s\n", nome_carta_pe2);
+                printf("População: %d\n", populacao_pe2);
+                printf("Área: %.2f Km²\n", area_pe2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pe2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pe2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pe2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pe2);
+                printf("Super Poder: %.2f\n", super_poder_pe2);         
+                printf("\n");
+
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_pe);
+                printf("Código: %s\n", codigo_carta_pe3);
+                printf("Cidade: %s\n", nome_carta_pe3);
+                printf("População: %d\n", populacao_pe3);
+                printf("Área: %.2f Km²\n", area_pe3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pe3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pe3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pe3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pe3);
+                printf("Super Poder: %.2f\n", super_poder_pe3);         
+                printf("\n");
+
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_pe);
+                printf("Código: %s\n", codigo_carta_pe4);
+                printf("Cidade: %s\n", nome_carta_pe4);
+                printf("População: %d\n", populacao_pe4);
+                printf("Área: %.2f Km²\n", area_pe4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_pe4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_pe4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_pe4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_pe4);
+                printf("Super Poder: %.2f\n", super_poder_pe4);         
+                printf("\n");
+            break;
+            }
+            { //H. Cidades de Goias
+            case 'H':
+            case 'h':
+                printf("Carta 1:\n");
+                printf("Estado: %s\n", nome_estado_go);
+                printf("Código: %s\n", codigo_carta_go1);
+                printf("Cidade: %s\n", nome_carta_go1);
+                printf("População: %d\n", populacao_go1);
+                printf("Área: %.2f Km²\n", area_go1);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_go1);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_go1);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_go1);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_go1);
+                printf("Super Poder: %.2f\n", super_poder_go1);         
+                printf("\n");
+
+                printf("Carta 2:\n");
+                printf("Estado: %s\n", nome_estado_go);
+                printf("Código: %s\n", codigo_carta_go2);
+                printf("Cidade: %s\n", nome_carta_go2);
+                printf("População: %d\n", populacao_go2);
+                printf("Área: %.2f Km²\n", area_go2);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_go2);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_go2);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_go2);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_go2);
+                printf("Super Poder: %.2f\n", super_poder_go2);         
+                printf("\n");
+
+                printf("Carta 3:\n");
+                printf("Estado: %s\n", nome_estado_go);
+                printf("Código: %s\n", codigo_carta_go3);
+                printf("Cidade: %s\n", nome_carta_go3);
+                printf("População: %d\n", populacao_go3);
+                printf("Área: %.2f Km²\n", area_go3);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_go3);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_go3);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_go3);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_go3);
+                printf("Super Poder: %.2f\n", super_poder_go3);         
+                printf("\n");
+
+                printf("Carta 4:\n");
+                printf("Estado: %s\n", nome_estado_go);
+                printf("Código: %s\n", codigo_carta_go4);
+                printf("Cidade: %s\n", nome_carta_go4);
+                printf("População: %d\n", populacao_go4);
+                printf("Área: %.2f Km²\n", area_go4);
+                printf("PIB: R$ %.2f Bilhões de Reais\n", pib_go4);
+                printf("Pontos Turísticos: %d\n", pontos_turisticos_go4);
+                printf("Densidade Populacional: %.2f hab/km²\n", densidade_pop_go4);
+                printf("PIB per capita: R$ %.2f\n", pib_per_capita_go4);
+                printf("Super Poder: %.2f\n", super_poder_go4);         
+                printf("\n");
+            break;
+            }
+
+            default:
+                printf("Opção inválida! Por favor escolha uma das opções especificadas.\n");
+        }  
+}
+//-----------------------Sair-------------------------------
+switch (opcao) //Pronto
+        {
+        case 'S':
+        case 's':
+            sair = 1;
+        break;
+
+        default:
+            printf("\n");
+            printf("Opção inválida! Escolha uma das opções especificadas abaixo!\n");
         }
 }
-
-
-
-}
-
 }
